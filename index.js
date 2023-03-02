@@ -15929,7 +15929,8 @@ var ErrorMessages = function ErrorMessages() {
       console.log("IMG Cleaning up error messages");
       // setErrors([]);
     };
-  }, [window]);
+  });
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, errors.map(function (error) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "bg-[#101820] mb-6"
