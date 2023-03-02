@@ -33048,6 +33048,7 @@ function postErrorMessages() {
           if (el.classList.contains("hl_without-topbar")) {
             el = document.querySelector("#app > div > section > * > *");
           }
+          log("Custom Menu Link?", el.classList.contains("hl_without-topbar"), el);
           el.prepend(img_error_root);
         } else {
           log("Same element?", false, document.querySelector("#app > div > section > *"));
