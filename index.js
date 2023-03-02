@@ -33063,12 +33063,11 @@ function postErrorMessages() {
   // Error Messages
   debugger;
   (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section > *").then(function (el) {
-    log("This should be the element", el);
+    // debugger;
     if (!document.getElementById("img_error_root")) {
-      var body = document.querySelector("#app > div > section > *");
       var img_error_root = document.createElement("div");
       img_error_root.id = "img_error_root";
-      body.prepend(img_error_root);
+      el.prepend(img_error_root);
       img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
       img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
         store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
