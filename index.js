@@ -32742,7 +32742,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // You can't call the useDispatch hook from here because it's not a function component.
 
 // App
-document.getElementById("customJS").prepend(document.createElement("div").id = "img_root");
+var _root = document.createElement("div");
+root.id = "img_root";
+document.getElementById("customJS").prepend(_root);
 var root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_root"));
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
   store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
@@ -32900,7 +32902,7 @@ var log = function log(msg, params) {
       window.addEventListener("routeChangeEvent", /*#__PURE__*/function () {
         var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
           var _window4, _window4$app, _window4$app$__vue__, _window4$app$__vue__$, _window5, _window5$app, _window5$app$__vue__, _window5$app$__vue__$;
-          var serializedState, iframe, dashboard, container, _root;
+          var serializedState, iframe, dashboard, container, _root2;
           return _regeneratorRuntime().wrap(function _callee$(_context) {
             while (1) switch (_context.prev = _context.next) {
               case 0:
@@ -32931,8 +32933,8 @@ var log = function log(msg, params) {
                   container = document.createElement("div");
                   container.id = "img_dash_root";
                   dashboard.prepend(container);
-                  _root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_dash_root"));
-                  _root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_white_labelled_dashboard__WEBPACK_IMPORTED_MODULE_12__["default"], null)));
+                  _root2 = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_dash_root"));
+                  _root2.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_white_labelled_dashboard__WEBPACK_IMPORTED_MODULE_12__["default"], null)));
                   dashboard.prepend;
                 }
                 return _context.abrupt("break", 11);
