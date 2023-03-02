@@ -32955,10 +32955,11 @@ var log = function log(msg, params) {
           return _regeneratorRuntime().wrap(function _callee2$(_context2) {
             while (1) switch (_context2.prev = _context2.next) {
               case 0:
-                // whiteLabel(LOCATION_ID);
+                imgFunnels.init();
                 log("locationChangeEvent", event);
                 // your logic here
-              case 1:
+                // whiteLabel(LOCATION_ID);
+              case 2:
               case "end":
                 return _context2.stop();
             }
@@ -32968,38 +32969,11 @@ var log = function log(msg, params) {
           return _ref2.apply(this, arguments);
         };
       }());
-
-      // imgFunnels.ePoll = setInterval(() => {
-      //   switch (window.location.pathname) {
-      //     case "/v2/location/WQZjWNMM1muqdOrhPcO3/dashboard":
-      //       imgFunnels.imgFunnelsDashboard();
-      //       break;
-      //     default:
-      //     // console.log("Fallthrough in pathname switch");
-      //   }
-      // }, 50);
-
       imgFunnels.init = function () {
         // log("IMG FUNNELS INITIALIZED");
-        (function waitForElm(selector) {
-          return new Promise(function (resolve) {
-            if (document.querySelector(selector)) {
-              return resolve(document.querySelector(selector));
-            }
-            var observer = new MutationObserver(function (mutations) {
-              if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-              }
-            });
-            observer.observe(document.body, {
-              childList: true,
-              subtree: true
-            });
-          });
-        })(".v2-open").then(function (notAPromise) {
+        (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])(".v2-open").then(function (notAPromise) {
           var COOKIE = JSON.parse(window.localStorage.getItem("img_data"));
-          // log("COOKIE", COOKIE);
+          log("COOKIE", COOKIE);
 
           // var meta = document.createElement("meta");
           // meta.id = "img_meta_tag";
@@ -33046,10 +33020,6 @@ var log = function log(msg, params) {
         });
       };
 
-      // imgFunnels.imgFunnelsDashboard = function () {
-      // log("Dashboard ePoll");
-      // };
-
       imgFunnels.init();
     } catch (error) {
       log("IMG ERROR", error);
@@ -33070,8 +33040,14 @@ function postErrorMessages() {
         var img_error_root = document.createElement("div");
         img_error_root.id = "img_error_root";
         var nextEl = document.querySelector("#app > div > section > *");
-        log("Same element?", nextEl === el ? true : document.querySelector("#app > div > section > *"));
-        el.prepend(img_error_root);
+        if (nextEl === el) {
+          log("Same element?", true);
+          el.prepend(img_error_root);
+        } else {
+          log("Same element?", false);
+          log("New element", document.querySelector("#app > div > section > *"));
+          nextEl.prepend(img_error_root);
+        }
         img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
         img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
           store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
