@@ -15912,7 +15912,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ErrorMessages = function ErrorMessages() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(["The IMG Funnels plug-in is under construction. We apologize for any inconvenience."]),
     _useState2 = _slicedToArray(_useState, 2),
     errors = _useState2[0],
     setErrors = _useState2[1];
@@ -15936,7 +15936,7 @@ var ErrorMessages = function ErrorMessages() {
       className: "flex flex-nowrap justify-between items-center w-full shadow"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h6", {
       className: "text-white text-center w-full -mb-[1px] py-0.5"
-    }, "The IMG Funnels plug-in is under construction. We apologize for any inconvenience.")));
+    }, error)));
   }));
 };
 /* harmony default export */ __webpack_exports__["default"] = (ErrorMessages);
