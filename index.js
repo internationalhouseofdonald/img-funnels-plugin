@@ -33043,7 +33043,7 @@ function postErrorMessages() {
         if (nextEl === el) {
           log("Same element?", true);
           if (el.classList.contains("hl_without-topbar")) {
-            el = el.firstChild;
+            el = document.querySelector("#app > div > section > * > *");
           }
           el.prepend(img_error_root);
         } else {
