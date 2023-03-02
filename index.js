@@ -32801,6 +32801,7 @@ var log = function log(msg, params) {
     }
     var __VUE_STATE__ = (_window3 = window) === null || _window3 === void 0 ? void 0 : (_window3$app = _window3.app) === null || _window3$app === void 0 ? void 0 : (_window3$app$__vue__ = _window3$app.__vue__) === null || _window3$app$__vue__ === void 0 ? void 0 : (_window3$app$__vue__$ = _window3$app$__vue__.$store) === null || _window3$app$__vue__$ === void 0 ? void 0 : _window3$app$__vue__$.state;
     log("file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js");
+    log("Local?", "file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js" === "file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js");
     debugger;
     var __CLIENT_ID__ = new URL("file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js").searchParams.get("clientId");
     log("CLIENT ID", __CLIENT_ID__);
