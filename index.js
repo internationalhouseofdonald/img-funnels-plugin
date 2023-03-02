@@ -33043,17 +33043,16 @@ function postErrorMessages() {
         img_error_root.id = "img_error_root";
         if (el === document.querySelector("#app > div > section > *")) {
           log("Same element.", el);
-          el.prepend(img_error_root);
         } else {
           log("Not the same element.", document.querySelector("#app > div > section > *"));
           el = document.querySelector("#app > div > section > *");
-          el.prepend(img_error_root);
         }
         if (el.classList.contains("hl_without-topbar")) {
           log("Element does not contain top bar");
           el = document.querySelector("#app > div > section > * > *");
         }
         img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
+        el.prepend(img_error_root);
         log("Rendering Error Root", el);
         img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
           store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
