@@ -32800,11 +32800,9 @@ var log = function log(msg, params) {
       log("Vue state is present.", (_window2 = window) === null || _window2 === void 0 ? void 0 : (_window2$app = _window2.app) === null || _window2$app === void 0 ? void 0 : (_window2$app$__vue__ = _window2$app.__vue__) === null || _window2$app$__vue__ === void 0 ? void 0 : (_window2$app$__vue__$ = _window2$app$__vue__.$store) === null || _window2$app$__vue__$ === void 0 ? void 0 : _window2$app$__vue__$.state);
     }
     var __VUE_STATE__ = (_window3 = window) === null || _window3 === void 0 ? void 0 : (_window3$app = _window3.app) === null || _window3$app === void 0 ? void 0 : (_window3$app$__vue__ = _window3$app.__vue__) === null || _window3$app$__vue__ === void 0 ? void 0 : (_window3$app$__vue__$ = _window3$app$__vue__.$store) === null || _window3$app$__vue__$ === void 0 ? void 0 : _window3$app$__vue__$.state;
-    log("file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js");
-    log(document.currentScript);
-    log("Local?", "file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js" === "file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js");
+    log(document.getElementById("img-funnels-plugin").dataset);
     debugger;
-    var __CLIENT_ID__ = new URL("file:///Users/donaldmoore/Desktop/Development/IMG-CRA-PLUGIN/src/index.js").searchParams.get("clientId");
+    var __CLIENT_ID__ = document.getElementById("img-funnels-plugin").dataset.clientId;
     log("CLIENT ID", __CLIENT_ID__);
     // let __STICKY_CONTACT_INFO__ = window.localStorage.getItem("_ud");
     var __LOCATION_ID__ = "";
@@ -33061,9 +33059,11 @@ var log = function log(msg, params) {
 });
 function postErrorMessages() {
   // Error Messages
-  debugger;
+  // debugger;
+
   (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section > *").then(function (el) {
-    // debugger;
+    console.log("This should be the element", el);
+    debugger;
     if (!document.getElementById("img_error_root")) {
       var img_error_root = document.createElement("div");
       img_error_root.id = "img_error_root";
