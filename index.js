@@ -33054,7 +33054,7 @@ function postErrorMessages() {
           el = document.querySelector("#app > div > section > * > *");
         }
         img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
-        log("Rendering Error Root");
+        log("Rendering Error Root", el);
         img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
           store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_error_messages__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
