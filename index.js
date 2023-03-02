@@ -33062,8 +33062,8 @@ var log = function log(msg, params) {
 function postErrorMessages() {
   // Error Messages
   debugger;
-  (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section:first-child").then(function () {
-    var body = document.querySelector("#app > div > section:first-child");
+  (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section > *").then(function () {
+    var body = document.querySelector("#app > div > section > *");
     var img_error_root = document.createElement("div");
     img_error_root.id = "img_error_root";
     body.prepend(img_error_root);
