@@ -33066,15 +33066,17 @@ function postErrorMessages() {
     console.log("This should be the element", el);
     debugger;
     if (!document.getElementById("img_error_root")) {
-      var img_error_root = document.createElement("div");
-      img_error_root.id = "img_error_root";
-      var nextEl = document.querySelector("#app > div > section > *");
-      log("Same element?", nextEl === el ? true : document.querySelector("#app > div > section > *"));
-      el.prepend(img_error_root);
-      img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
-      img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
-        store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_error_messages__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
+      setTimeout(function () {
+        var img_error_root = document.createElement("div");
+        img_error_root.id = "img_error_root";
+        var nextEl = document.querySelector("#app > div > section > *");
+        log("Same element?", nextEl === el ? true : document.querySelector("#app > div > section > *"));
+        el.prepend(img_error_root);
+        img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
+        img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
+          store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_error_messages__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
+      }, 1);
     }
   });
 }
