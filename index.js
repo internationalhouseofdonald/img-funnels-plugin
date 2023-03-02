@@ -33060,10 +33060,11 @@ var log = function log(msg, params) {
   }
 });
 function postErrorMessages() {
-  if (!document.getElementById("img_error_root")) {
-    // Error Messages
-    debugger;
-    (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section > *").then(function () {
+  // Error Messages
+  debugger;
+  (0,_helpers_waitForElement__WEBPACK_IMPORTED_MODULE_8__["default"])("#app > div > section > *").then(function (el) {
+    log("This should be the element", el);
+    if (!document.getElementById("img_error_root")) {
       var body = document.querySelector("#app > div > section > *");
       var img_error_root = document.createElement("div");
       img_error_root.id = "img_error_root";
@@ -33072,8 +33073,8 @@ function postErrorMessages() {
       img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
         store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_error_messages__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
-    });
-  }
+    }
+  });
 }
 
 // If you want to start measuring performance in your app, pass a function
