@@ -16056,7 +16056,7 @@ var Sidebar = function Sidebar(_ref) {
     className: "block mb-2 text-base font-medium text-gray-900"
   }, "Category"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
     id: "large",
-    className: "block py-2 px-3 w-full text-base text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-0 focus:border-gray-300 focus:shadow-none ".concat(selectValue === void 0 || selectValue === "None" ? "font-italic text-gray-300 font-weight-light" : ""),
+    className: "block py-2 px-3 w-full text-base text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-0 focus:border-gray-300 focus:shadow-none ".concat(selectValue === void 0 || selectValue === "None" ? navigator.userAgent.indexOf("Mac") ? "font-italic text-gray-300 font-weight-light" : "" : ""),
     value: selectValue,
     onChange: function onChange(e) {
       setSelectValue(e.target.value);
