@@ -15926,7 +15926,8 @@ var ErrorMessages = function ErrorMessages() {
       return calendar.locationId === userCalendars.location_id;
     }));
     return function () {
-      setErrors([]);
+      console.log("IMG Cleaning up error messages");
+      // setErrors([]);
     };
   }, [window]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, errors.map(function (error) {
