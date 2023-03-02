@@ -32777,17 +32777,15 @@ loader.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createE
   var root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_nav_root"));
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_support_button__WEBPACK_IMPORTED_MODULE_10__["default"], null)));
 });
-var log = function log(msg, params) {
+var log = function log(msg) {
   var styles = "color: #202020; font-family: 'serif', monospace; letter-spacing: 2px; font-weight: 800; background-image: linear-gradient(to bottom, orange, rebeccapurple); font-size: 17px; padding-left: 5px; padding-right: 5px;";
   var head = "%cimgFunnels\n";
-  for (var _len = arguments.length, params2 = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    params2[_key - 2] = arguments[_key];
+  for (var _len = arguments.length, params = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    params[_key - 1] = arguments[_key];
   }
-  if (params2) {
+  if (params) {
     var _console;
-    (_console = console).log.apply(_console, [head, styles, msg, params].concat(params2));
-  } else if (params) {
-    console.log(head, styles, msg, params);
+    (_console = console).log.apply(_console, [head, styles, msg].concat(params));
   } else {
     console.log(head, styles, msg);
   }
