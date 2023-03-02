@@ -32742,6 +32742,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 // You can't call the useDispatch hook from here because it's not a function component.
 
 // App
+document.getElementById("customJS").prepend(document.createElement("div").id = "img_root");
 var root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_root"));
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
   store: _redux_store__WEBPACK_IMPORTED_MODULE_4__.store
@@ -32800,9 +32801,7 @@ var log = function log(msg, params) {
       log("Vue state is present.", (_window2 = window) === null || _window2 === void 0 ? void 0 : (_window2$app = _window2.app) === null || _window2$app === void 0 ? void 0 : (_window2$app$__vue__ = _window2$app.__vue__) === null || _window2$app$__vue__ === void 0 ? void 0 : (_window2$app$__vue__$ = _window2$app$__vue__.$store) === null || _window2$app$__vue__$ === void 0 ? void 0 : _window2$app$__vue__$.state);
     }
     var __VUE_STATE__ = (_window3 = window) === null || _window3 === void 0 ? void 0 : (_window3$app = _window3.app) === null || _window3$app === void 0 ? void 0 : (_window3$app$__vue__ = _window3$app.__vue__) === null || _window3$app$__vue__ === void 0 ? void 0 : (_window3$app$__vue__$ = _window3$app$__vue__.$store) === null || _window3$app$__vue__$ === void 0 ? void 0 : _window3$app$__vue__$.state;
-    log(document.getElementById("img-funnels-plugin").dataset);
-    debugger;
-    var __CLIENT_ID__ = document.getElementById("img-funnels-plugin").dataset.clientId;
+    var __CLIENT_ID__ = document.getElementById("img_plugin").dataset.clientId;
     log("CLIENT ID", __CLIENT_ID__);
     // let __STICKY_CONTACT_INFO__ = window.localStorage.getItem("_ud");
     var __LOCATION_ID__ = "";
@@ -33067,6 +33066,8 @@ function postErrorMessages() {
     if (!document.getElementById("img_error_root")) {
       var img_error_root = document.createElement("div");
       img_error_root.id = "img_error_root";
+      var nextEl = document.querySelector("#app > div > section > *");
+      log("Same element?", nextEl === el);
       el.prepend(img_error_root);
       img_error_root = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("img_error_root"));
       img_error_root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
